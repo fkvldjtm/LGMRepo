@@ -1,0 +1,10 @@
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\bin\Debug\Meeting Notes.exe.config
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\bin\Debug\Meeting Notes.exe
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\bin\Debug\Meeting Notes.pdb
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting Notes.csprojAssemblyReference.cache
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting_Notes.Form1.resources
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting_Notes.Properties.Resources.resources
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting Notes.csproj.GenerateResource.cache
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting Notes.csproj.CoreCompileInputs.cache
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting Notes.exe
+C:\Users\fkvld\Source\Repos\Meeting Notes\Meeting Notes\obj\Debug\Meeting Notes.pdb
