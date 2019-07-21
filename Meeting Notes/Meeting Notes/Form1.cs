@@ -13,6 +13,8 @@ namespace Meeting_Notes
     public partial class Form1 : Form
     {
 
+        
+
         TabControl Main_Tab_Control = new TabControl();
         public Form1()
         {
@@ -24,8 +26,10 @@ namespace Meeting_Notes
         {
             // this will make form load on current working monitor
             this.Location = Screen.AllScreens[1].WorkingArea.Location;
-            Menu_Tab_Control.TabPages.Remove(Configuration);
-            Menu_Tab_Control.TabPages.Remove(Search);
+
+            // 아래 두 줄을 추가하면 SelectedTab 사용 시 Tab 전환이 안됨.
+            //Menu_Tab_Control.TabPages.Remove(Configuration);
+            //Menu_Tab_Control.TabPages.Remove(Search);
 
         }
 
@@ -52,12 +56,20 @@ namespace Meeting_Notes
 
         private void Menu_Search_BT_Click(object sender, EventArgs e)
         {
-            Menu_Tab_Control.SelectTab("Search");
+            try
+            {
+                Menu_Tab_Control.SelectedTab = Search;
+            }
+            catch
+            {
+                Menu_Tab_Control.SelectedIndex = 0;
+            }
+            
         }
 
         private void Menu_Configuration_BT_Click(object sender, EventArgs e)
         {
-            Menu_Tab_Control.SelectTab("Configuration");
+            Menu_Tab_Control.SelectedTab = Configuration;
         }
     }
 }

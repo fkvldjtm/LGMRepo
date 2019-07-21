@@ -35,25 +35,28 @@
             this.Main_Label = new System.Windows.Forms.Label();
             this.Top_Panel = new System.Windows.Forms.Panel();
             this.Close_BT = new System.Windows.Forms.Button();
-            this.Issue_List_View = new System.Windows.Forms.ListView();
-            this.Action_Item_List_View = new System.Windows.Forms.ListView();
             this.Menu_Tab_Control = new System.Windows.Forms.TabControl();
             this.Configuration = new System.Windows.Forms.TabPage();
             this.Search = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Action_Item = new System.Windows.Forms.TabPage();
             this.Action_Item_List_Box = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Issue = new System.Windows.Forms.TabPage();
             this.Issu_List_Box = new System.Windows.Forms.ListBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Date = new System.Windows.Forms.TabPage();
             this.Date_List_Box = new System.Windows.Forms.ListBox();
             this.List_Search_Tab = new System.Windows.Forms.TabControl();
+            this.Action_Item_List_View = new System.Windows.Forms.ListView();
+            this.Issue_List_View = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Left_Panel.SuspendLayout();
             this.Left_Top_Panel.SuspendLayout();
             this.Top_Panel.SuspendLayout();
             this.Menu_Tab_Control.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.Configuration.SuspendLayout();
+            this.Search.SuspendLayout();
+            this.Action_Item.SuspendLayout();
+            this.Issue.SuspendLayout();
+            this.Date.SuspendLayout();
             this.List_Search_Tab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +107,7 @@
             // Left_Top_Panel
             // 
             this.Left_Top_Panel.BackColor = System.Drawing.Color.DarkOrange;
+            this.Left_Top_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Left_Top_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Left_Top_Panel.Controls.Add(this.Main_Label);
             this.Left_Top_Panel.Location = new System.Drawing.Point(-1, -1);
@@ -124,7 +128,6 @@
             // Top_Panel
             // 
             this.Top_Panel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Top_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Top_Panel.Controls.Add(this.Close_BT);
             this.Top_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Top_Panel.Location = new System.Drawing.Point(146, 0);
@@ -149,35 +152,20 @@
             this.Close_BT.UseVisualStyleBackColor = false;
             this.Close_BT.Click += new System.EventHandler(this.Close_BT_Click);
             // 
-            // Issue_List_View
-            // 
-            this.Issue_List_View.Location = new System.Drawing.Point(455, 117);
-            this.Issue_List_View.Name = "Issue_List_View";
-            this.Issue_List_View.Size = new System.Drawing.Size(296, 141);
-            this.Issue_List_View.TabIndex = 4;
-            this.Issue_List_View.UseCompatibleStateImageBehavior = false;
-            // 
-            // Action_Item_List_View
-            // 
-            this.Action_Item_List_View.Location = new System.Drawing.Point(455, 290);
-            this.Action_Item_List_View.Name = "Action_Item_List_View";
-            this.Action_Item_List_View.Size = new System.Drawing.Size(296, 375);
-            this.Action_Item_List_View.TabIndex = 4;
-            this.Action_Item_List_View.UseCompatibleStateImageBehavior = false;
-            // 
             // Menu_Tab_Control
             // 
             this.Menu_Tab_Control.Controls.Add(this.Configuration);
             this.Menu_Tab_Control.Controls.Add(this.Search);
-            this.Menu_Tab_Control.Location = new System.Drawing.Point(146, 56);
+            this.Menu_Tab_Control.Location = new System.Drawing.Point(146, 34);
             this.Menu_Tab_Control.Name = "Menu_Tab_Control";
             this.Menu_Tab_Control.SelectedIndex = 0;
-            this.Menu_Tab_Control.Size = new System.Drawing.Size(777, 891);
-            this.Menu_Tab_Control.TabIndex = 5;
+            this.Menu_Tab_Control.Size = new System.Drawing.Size(777, 913);
+            this.Menu_Tab_Control.TabIndex = 0;
             // 
             // Configuration
             // 
             this.Configuration.BackColor = System.Drawing.Color.LightGray;
+            this.Configuration.Controls.Add(this.button1);
             this.Configuration.Location = new System.Drawing.Point(4, 26);
             this.Configuration.Name = "Configuration";
             this.Configuration.Padding = new System.Windows.Forms.Padding(3);
@@ -187,23 +175,28 @@
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(4, 22);
+            this.Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Search.Controls.Add(this.Action_Item_List_View);
+            this.Search.Controls.Add(this.List_Search_Tab);
+            this.Search.Controls.Add(this.Issue_List_View);
+            this.Search.Location = new System.Drawing.Point(4, 26);
+            this.Search.Margin = new System.Windows.Forms.Padding(0);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(769, 865);
+            this.Search.Size = new System.Drawing.Size(769, 883);
             this.Search.TabIndex = 2;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Action_Item
             // 
-            this.tabPage3.Controls.Add(this.Action_Item_List_Box);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(253, 558);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Action Item";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Action_Item.Controls.Add(this.Action_Item_List_Box);
+            this.Action_Item.Location = new System.Drawing.Point(4, 26);
+            this.Action_Item.Name = "Action_Item";
+            this.Action_Item.Padding = new System.Windows.Forms.Padding(3);
+            this.Action_Item.Size = new System.Drawing.Size(253, 554);
+            this.Action_Item.TabIndex = 2;
+            this.Action_Item.Text = "Action Item";
+            this.Action_Item.UseVisualStyleBackColor = true;
             // 
             // Action_Item_List_Box
             // 
@@ -212,19 +205,19 @@
             this.Action_Item_List_Box.ItemHeight = 17;
             this.Action_Item_List_Box.Location = new System.Drawing.Point(3, 3);
             this.Action_Item_List_Box.Name = "Action_Item_List_Box";
-            this.Action_Item_List_Box.Size = new System.Drawing.Size(247, 552);
+            this.Action_Item_List_Box.Size = new System.Drawing.Size(247, 548);
             this.Action_Item_List_Box.TabIndex = 4;
             // 
-            // tabPage2
+            // Issue
             // 
-            this.tabPage2.Controls.Add(this.Issu_List_Box);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(253, 558);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Issue";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Issue.Controls.Add(this.Issu_List_Box);
+            this.Issue.Location = new System.Drawing.Point(4, 26);
+            this.Issue.Name = "Issue";
+            this.Issue.Padding = new System.Windows.Forms.Padding(3);
+            this.Issue.Size = new System.Drawing.Size(253, 554);
+            this.Issue.TabIndex = 1;
+            this.Issue.Text = "Issue";
+            this.Issue.UseVisualStyleBackColor = true;
             // 
             // Issu_List_Box
             // 
@@ -233,19 +226,19 @@
             this.Issu_List_Box.ItemHeight = 17;
             this.Issu_List_Box.Location = new System.Drawing.Point(3, 3);
             this.Issu_List_Box.Name = "Issu_List_Box";
-            this.Issu_List_Box.Size = new System.Drawing.Size(247, 552);
+            this.Issu_List_Box.Size = new System.Drawing.Size(247, 548);
             this.Issu_List_Box.TabIndex = 4;
             // 
-            // tabPage1
+            // Date
             // 
-            this.tabPage1.Controls.Add(this.Date_List_Box);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(253, 554);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Date";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Date.Controls.Add(this.Date_List_Box);
+            this.Date.Location = new System.Drawing.Point(4, 26);
+            this.Date.Name = "Date";
+            this.Date.Padding = new System.Windows.Forms.Padding(3);
+            this.Date.Size = new System.Drawing.Size(253, 554);
+            this.Date.TabIndex = 0;
+            this.Date.Text = "Date";
+            this.Date.UseVisualStyleBackColor = true;
             // 
             // Date_List_Box
             // 
@@ -259,23 +252,45 @@
             // 
             // List_Search_Tab
             // 
-            this.List_Search_Tab.Controls.Add(this.tabPage1);
-            this.List_Search_Tab.Controls.Add(this.tabPage2);
-            this.List_Search_Tab.Controls.Add(this.tabPage3);
-            this.List_Search_Tab.Location = new System.Drawing.Point(173, 88);
+            this.List_Search_Tab.Controls.Add(this.Date);
+            this.List_Search_Tab.Controls.Add(this.Issue);
+            this.List_Search_Tab.Controls.Add(this.Action_Item);
+            this.List_Search_Tab.Location = new System.Drawing.Point(23, 61);
             this.List_Search_Tab.Name = "List_Search_Tab";
             this.List_Search_Tab.SelectedIndex = 0;
             this.List_Search_Tab.Size = new System.Drawing.Size(261, 584);
             this.List_Search_Tab.TabIndex = 1;
             // 
+            // Action_Item_List_View
+            // 
+            this.Action_Item_List_View.Location = new System.Drawing.Point(305, 237);
+            this.Action_Item_List_View.Name = "Action_Item_List_View";
+            this.Action_Item_List_View.Size = new System.Drawing.Size(296, 375);
+            this.Action_Item_List_View.TabIndex = 4;
+            this.Action_Item_List_View.UseCompatibleStateImageBehavior = false;
+            // 
+            // Issue_List_View
+            // 
+            this.Issue_List_View.Location = new System.Drawing.Point(305, 61);
+            this.Issue_List_View.Name = "Issue_List_View";
+            this.Issue_List_View.Size = new System.Drawing.Size(296, 141);
+            this.Issue_List_View.TabIndex = 4;
+            this.Issue_List_View.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(43, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 194);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(925, 947);
-            this.Controls.Add(this.Action_Item_List_View);
-            this.Controls.Add(this.Issue_List_View);
             this.Controls.Add(this.Top_Panel);
-            this.Controls.Add(this.List_Search_Tab);
             this.Controls.Add(this.Left_Panel);
             this.Controls.Add(this.Menu_Tab_Control);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,9 +304,11 @@
             this.Left_Top_Panel.PerformLayout();
             this.Top_Panel.ResumeLayout(false);
             this.Menu_Tab_Control.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.Configuration.ResumeLayout(false);
+            this.Search.ResumeLayout(false);
+            this.Action_Item.ResumeLayout(false);
+            this.Issue.ResumeLayout(false);
+            this.Date.ResumeLayout(false);
             this.List_Search_Tab.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -303,20 +320,21 @@
         private System.Windows.Forms.Label Main_Label;
         private System.Windows.Forms.Panel Top_Panel;
         private System.Windows.Forms.Button Close_BT;
-        private System.Windows.Forms.ListView Issue_List_View;
-        private System.Windows.Forms.ListView Action_Item_List_View;
         private System.Windows.Forms.TabControl Menu_Tab_Control;
         private System.Windows.Forms.TabPage Configuration;
         private System.Windows.Forms.TabPage Search;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ListBox Action_Item_List_Box;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox Issu_List_Box;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox Date_List_Box;
-        private System.Windows.Forms.TabControl List_Search_Tab;
         private System.Windows.Forms.Button Menu_Search_BT;
         private System.Windows.Forms.Button Menu_Configuration_BT;
+        private System.Windows.Forms.ListView Action_Item_List_View;
+        private System.Windows.Forms.TabControl List_Search_Tab;
+        private System.Windows.Forms.TabPage Date;
+        private System.Windows.Forms.ListBox Date_List_Box;
+        private System.Windows.Forms.TabPage Issue;
+        private System.Windows.Forms.ListBox Issu_List_Box;
+        private System.Windows.Forms.TabPage Action_Item;
+        private System.Windows.Forms.ListBox Action_Item_List_Box;
+        private System.Windows.Forms.ListView Issue_List_View;
+        private System.Windows.Forms.Button button1;
     }
 }
 
